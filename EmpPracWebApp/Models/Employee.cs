@@ -24,6 +24,8 @@ namespace EmpPracWebApp.Models
         public int EmployeeTypeId { get; set; }
         public Nullable<decimal> HouseAllowance { get; set; }
         public Nullable<decimal> MedicalAllowance { get; set; }
+        public string ComputerDetails { get; set; }
+        public string SystemConfigurationDetails { get; set; }
     
         public virtual Employee_Type Employee_Type { get; set; }
     }

@@ -19,6 +19,8 @@
           <Property Name="EmployeeTypeId" Type="int" Nullable="false" />
           <Property Name="HouseAllowance" Type="decimal" Precision="18" Scale="0" />
           <Property Name="MedicalAllowance" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ComputerDetails" Type="nvarchar" MaxLength="250" />
+          <Property Name="SystemConfigurationDetails" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Employee_Type">
           <Key>
@@ -66,6 +68,8 @@
           <NavigationProperty Name="Employee_Type" Relationship="EmployeePortalModel.FK_Employee_Employee_Type" FromRole="Employee" ToRole="Employee_Type" />
           <Property Name="HouseAllowance" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="MedicalAllowance" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ComputerDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SystemConfigurationDetails" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="EmployeePortalEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employees" EntityType="Self.Employee" />
@@ -104,6 +108,8 @@
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="EmployeePortalModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="SystemConfigurationDetails" ColumnName="SystemConfigurationDetails" />
+                <ScalarProperty Name="ComputerDetails" ColumnName="ComputerDetails" />
                 <ScalarProperty Name="MedicalAllowance" ColumnName="MedicalAllowance" />
                 <ScalarProperty Name="HouseAllowance" ColumnName="HouseAllowance" />
                 <ScalarProperty Name="EmployeeTypeId" ColumnName="EmployeeTypeId" />
