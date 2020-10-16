@@ -17,7 +17,21 @@ namespace EmpPracWebApp.Controllers
     public class EmployeesController : BaseController
     {
         private EmployeePortalEntities db = new EmployeePortalEntities();
-
+        [HttpGet]
+        public ActionResult BuildSystem(int? employeeID)
+        {
+            return View(employeeID);
+        }
+        [HttpPost]
+        public ActionResult BuildSystem(int employeeID, string RAM, string HDDSize)
+        {
+            Employee employee = db.Employees.Find(employeeID);
+            ComputerSystem computerSystem = new ComputerSystem(RAM, HDDSize);
+            employee.SystemConfigurationDetails = computerSystem.Build();
+            db.Entry(employee).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         // GET: Employees
         public ActionResult Index()
         {
