@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoPatternTest", "RepoPatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolePracticeApp", "ConsolePracticeApp\ConsolePracticeApp.csproj", "{6C3E3DDD-6990-47C6-9DA6-B73420A123CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpPracWebApp", "EmpPracWebApp\EmpPracWebApp.csproj", "{503FED33-E60C-4BE8-953C-7283E91F56E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPracWebApp", "EmpPracWebApp\FactoryPracWebApp.csproj", "{503FED33-E60C-4BE8-953C-7283E91F56E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerLibrary", "LoggerLibrary\LoggerLibrary.csproj", "{9E60C31D-12F4-4628-A8BA-F891F54DA7C7}"
 EndProject
